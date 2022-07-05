@@ -1,0 +1,431 @@
+@import "../variables";
+@import "../mixins";
+
+.c_page-header-background {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(http://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg);
+  background-attachment: fixed;
+}
+
+.c_short-introduction {
+  text-align: center;
+  .sub-brand {
+    font-size: 4rem;
+  }
+  .brand {
+    font-size: 12rem;
+  }
+}
+
+.c_no-data {
+  margin: auto;
+  text-align: center;
+}
+
+.c_sns-share {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  div {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.c_icon {
+  font-size: 1.2rem;
+  color: #391233;
+
+}
+
+.c_sns-login-button {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  .sns-login-button {
+    margin-top: 10px;
+  }
+}
+
+.c_login-form {
+  padding: 10px;
+}
+
+.c_language-flag {
+  .flag {
+    width: 65px;
+    height: 35px;
+    margin: auto;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    box-shadow: 0px 4px 4px 4px #0000001A;
+    margin-top: 5px;
+  }
+}
+
+.c_page-header {
+  min-height: 500px;
+  .placeholder-background { 
+    position: absolute; 
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include background-handler;
+    z-index: -1;
+  }
+  .placeholder-background::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.2);
+  }
+  .page-header {
+    height: 500px;
+    background: transparent !important;
+    position: relative;
+    display: table;
+    color: $nav-text-color;
+    .info {
+      display: table-cell;
+      vertical-align: middle;
+      .text {
+        text-align: center;
+        font-size: 1.2rem;
+        text-size-adjust: 100%;
+        padding: 0 !important;
+        .title {
+          font-weight: 700;
+          font-size: 2rem;
+          line-height: 1.25;
+        }
+      }
+
+      .header-buttons {
+        display: flex;
+        margin-top: 40px;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .header-button {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.c_page-footer {
+  width: 100%;
+  min-height: 200px;
+  color: $nav-text-color;
+  background: #CA2C46;
+  text-align: center;
+  .page-footer {
+    height: 200px;
+    margin: auto;
+    display: table;
+    .text {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 1rem;
+      text-size-adjust: 100%;
+    }
+  }
+}
+
+.c_goal {
+  min-height: 250px;
+  .goals {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .goal {
+      min-height: 250px;
+      background: white;
+      flex: 0 0 24%;
+      padding: 5px;
+      padding-top:20px;
+      margin-right: 10px;
+      text-align: justify;
+      font-weight: 600;
+      text-size-adjust: 100%;
+      border: 1px solid $layout_wrapper-border-color;
+      box-shadow: 0px 4px 4px 4px #0000001A;
+      border-radius: 10px;
+      text-align: center;
+      .goal-title {
+        font-size: 1.1rem;
+        margin-top: 30px;
+      }
+      .icon-wrapper {
+        margin: auto;
+        .icon {
+          font-size: 5rem;
+        }
+      }
+      .goal-description {
+        padding-top: 20px;
+        font-weight: 100;
+      }
+    }
+  }
+}
+
+.c_sns-share-button {
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .sns-share-button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid $layout_wrapper-border-color;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 1.2rem;
+    margin: auto;
+    margin-right: 10px;
+    text-align: center;
+    background: $background-color;
+  }
+}
+
+.c_user-profile-image {
+  text-align: center;
+  position: relative;
+  .c_profile-image {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    .profile-image-handler {
+      width: 100%;
+      height: 100%;
+      border: 1px solid $layout_wrapper-border-color;
+      border-radius: 50px;
+      position: relative;
+      @include background-handler();
+    }
+  }
+  .name {
+    font-size: 0.7rem;
+  }
+}
+
+.c_testimony {
+  width: 300px;
+  border: 1px solid $layout_wrapper-border-color;
+  background: $background-color;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 0px 4px 4px 4px #0000001A;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  .profile {
+  }
+  .self-intro {
+    width: 100%;
+    height: 50px;
+    bottom:0px;
+    text-align: center;
+    .text {
+      margin-top: 30px;
+      padding-top: 5px;
+      margin-right: 10px;
+      .name {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+      .title {
+        font-size: 0.7rem;
+      }
+    }
+  } 
+  .service-tags {
+    margin-top: 5px;
+    font-size: 0.7rem;
+    padding: 5px;
+    margin-left: 24px;
+    .service-tag {
+      border: 1px solid;
+      border-radius: 5px;
+      padding: 3px;
+      margin-right: 5px;
+    }
+  }
+  .testimony-text {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    .text {
+      width: 90%;
+      min-height: 140px;
+      margin-left: 10px;
+      padding-left: 10px;
+      font-weight: 100;
+      text-align: justify;
+    }
+  }
+}
+
+.c_schedule-participant {
+  width: 80px;
+  height: auto;
+  padding: 5px;
+  text-align: center;
+  .participant-data {
+    margin-top: 5px;
+    .participant-note {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.c_entity {
+  width: 320px;
+  height: auto;
+  position: relative;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 4px 4px 4px #0000001A;
+  .photo {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top:10px;
+    background: url('/images/profile-placeholder.jpeg');
+    border-radius: 10px;
+    @include background-handler;
+    background-position: unset !important;
+  }
+  .info {
+    text-align:center;
+    margin-top: 30px;
+    .name {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .position {
+      font-size: 1rem;
+    }
+  }
+  .testimony {
+    padding: 10px;
+    padding-top: 20px;
+    table {
+      width: 100%
+    }
+  }
+}
+
+.c_article {
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+  position: relative;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 4px 4px 4px #0000001A;
+  .thumbnail {
+    width: 100%;
+    height: 200px;
+    @include background-handler;
+  }
+  .title {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    font-size: 1rem;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .short-desc {
+    max-height: 100px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $disabled;
+    font-size: 0.7rem; 
+  }
+  .meta{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .like {
+
+  }
+  .date {
+    font-size: 0.7rem;
+    text-align: right;
+  }
+}
+
+/** Responsive : default smartphone **/
+@media screen
+  and (min-device-width: $layout_min-width-sp) 
+  and (max-device-width: $layout_max-width-sp) {
+
+  .c_testimony {
+    margin-left: 0px !important;
+  }
+
+  .c_sns-share {
+    flex-direction: row !important;
+    justify-content: center;
+  }
+  .c_entity {
+    margin-left: 0px !important;
+  }
+
+  .c_goal {
+    min-height: 300px !important;
+    .goals {
+      .goal {
+        flex: 0 0 46% !important;
+        font-size: 0.9rem !important;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-right: 0px !important;
+        .goal-description {
+          font-size: 0.7rem !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen
+  and (min-device-width: $layout_min-width-tab) 
+  and (max-device-width: $layout_max-width-tab) {
+}
+
+/** Responsive : default PC **/
+@media screen
+  and (min-device-width: $layout_min-width-pc) 
+  and (max-device-width: $layout_max-width-pc) {
+  
+}

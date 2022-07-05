@@ -1,0 +1,28 @@
+.calendar-info .actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+.calendar-info .action {
+  margin-right: 5px;
+}
+.calendar-info .participant-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/** Responsive : default smartphone **/
+@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  .calendar-info .actions {
+    flex-direction: column !important;
+  }
+  .calendar-info .actions .action {
+    margin-bottom: 5px;
+  }
+  .calendar-info .schedule-label {
+    display: none;
+  }
+}
+/** Responsive : default PC **/

@@ -1,0 +1,54 @@
+.contact .map {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+.contact .pic {
+  width: 100%;
+}
+.contact .pic .pics {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.contact .contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contact .contact-info .contact-form {
+  max-width: 800px;
+}
+.contact .contact-info .information {
+  width: 300px;
+}
+.contact .contact-info .information .each-info-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 0.7rem;
+}
+.contact .contact-info .information .each-info-wrapper .icon {
+  text-align: center;
+  min-width: 50px;
+}
+.contact .contact-info .information .each-info-wrapper .icon i {
+  font-size: 40px;
+  margin: auto;
+}
+.contact .contact-info .information .each-info-wrapper .info {
+  padding-left: 15px;
+  padding-right: 5px;
+  max-width: 230px;
+}
+.contact .contact-info .information .each-info-wrapper .info .label {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/** Responsive : default smartphone **/
+/** Responsive : default PC **/

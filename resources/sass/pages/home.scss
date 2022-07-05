@@ -1,0 +1,167 @@
+// Variables
+@import "../variables";
+@import "../mixins";
+
+.home {
+  .jyoutaiji-goal-wrapper {
+    min-height: 250px;
+  }
+  .profesional-greeting-wrapper {
+    width: 100%;
+  }
+
+  .profesional-greetings {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 200px;
+  }
+
+  .leader-greeting {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    .leader-photo {
+      width: 50%;
+      height: auto;
+      .placeholder {
+        width: 320px;
+        height: 320px;
+        margin: auto;
+        background: url(/images/leader-image.jpeg);
+        @include background-handler;
+        border-radius: 10px;
+      }
+      .leader-profile {
+        .info {
+          text-align: center;
+          .leader-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+          }
+          .leader-position {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    .leader-message {
+      width: 50%;
+      min-height: auto;
+      padding: 25px;
+      article {
+        font-size: 1.3rem;
+        .message {
+          position: relative;
+          text-align: justify;
+        }
+      }
+    }
+  }
+
+  .testimonies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .articles {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .news {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px !important;
+    .each-news {
+      display: flex;
+      flex-direction: row;
+      padding: 5px;
+      .news-date {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        min-width: 65px;
+        .date {
+          width: 35px;
+          height: 35px;
+          text-align: center;
+          font-size: 1.5rem;
+          margin-left: auto;
+          margin-right: auto;
+          background: #ccc;
+          border: 1px solid;
+          border-radius: 5px;
+        }
+      }
+      .news-title {
+        padding-left: 10px;
+        border-left: 5px solid;
+        display: inline-flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+/** Responsive : default smartphone **/
+@media screen
+  and (min-device-width: $layout_min-width-sp) 
+  and (max-device-width: $layout_max-width-sp) {
+  .c_goal {
+    min-height: 300px !important;
+    .goals {
+      .goal {
+        flex: 0 0 100% !important;
+        margin-bottom: 10px;
+        font-size: 0.9rem !important;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-right: 0px !important;
+        .goal-description {
+          font-size: 0.7rem !important;
+        }
+      }
+    }
+  }
+  .leader-greeting {
+    flex-direction: column-reverse !important;
+    .leader-photo {
+      width: 100% !important;
+    }
+    .leader-message {
+      width: 100% !important;
+      height: auto;
+      article {
+        padding-left: 0px !important;
+        .message {
+          font-size: 1.1rem;
+          text-align: center;
+        }
+      }
+    }
+    .leader-profile {
+      flex-direction: column !important;
+      padding-left: 0px !important;
+      text-align: center !important;
+    }
+  }
+}
+
+@media screen
+  and (min-device-width: $layout_min-width-tab) 
+  and (max-device-width: $layout_max-width-tab) {
+  
+}
+
+/** Responsive : default PC **/
+@media screen
+  and (min-device-width: $layout_min-width-pc) 
+  and (max-device-width: $layout_max-width-pc) {
+  
+}

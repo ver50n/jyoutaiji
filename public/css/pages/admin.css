@@ -1,0 +1,28 @@
+.overlay {
+  display: none;
+}
+
+.grid-action-wrapper {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.grid-action-wrapper .grid-action {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.grid-body-image-wrapper {
+  width: 100px;
+  height: 100px;
+}
+.grid-body-image-wrapper .img {
+  width: 100%;
+}
+
+.grid-body-action__icon-wrapper {
+  display: inline-block;
+}
+
+.components__card-section-wrapper {
+  margin-bottom: 10px;
+}

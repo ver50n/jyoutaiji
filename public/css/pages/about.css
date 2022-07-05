@@ -1,0 +1,54 @@
+.about .infos {
+  display: flex;
+  flex-direction: column;
+}
+.about .infos .info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
+.about .infos .info .icon {
+  width: 300px;
+  height: 300px;
+  display: table;
+  text-align: center;
+  border-radius: 10px;
+  background: #7c5295;
+  margin: 20px;
+}
+.about .infos .info .icon i {
+  vertical-align: middle;
+  display: table-cell;
+  font-size: 15rem;
+}
+.about .infos .info .value {
+  width: 60%;
+  text-align: center;
+}
+.about .infos .row-reverse {
+  flex-direction: row-reverse;
+}
+
+/** Responsive : default smartphone **/
+@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  .about .infos .info, .about .infos .row-reverse {
+    width: 100%;
+    display: flex;
+    flex-direction: column !important;
+  }
+  .about .infos .info .icon, .about .infos .row-reverse .icon {
+    width: 100%;
+    margin: 0px;
+  }
+  .about .infos .info .value, .about .infos .row-reverse .value {
+    width: 100%;
+  }
+
+  .about-header {
+    background-position-y: 0px;
+    background-position-x: -265px;
+  }
+}
+/** Responsive : default PC **/

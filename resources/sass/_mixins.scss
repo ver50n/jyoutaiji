@@ -1,0 +1,25 @@
+@import "variables";
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin background-handler {
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+@mixin button-base {
+  display: block;
+  border: 0;
+  margin: auto;
+  text-align: center;
+  border-radius: 0.25rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: $form_max-width;
+}
+

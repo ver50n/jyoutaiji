@@ -1,0 +1,79 @@
+// Variables
+@import "../variables";
+
+.contact {
+  .map {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .pic {
+    width: 100%;
+    .pics {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+  }
+
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .contact-form {
+      max-width: 800px;
+    }
+    .information {
+      width: 300px;
+      .each-info-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 5px;
+        font-size: 0.7rem;
+        .icon {
+          text-align: center;
+          min-width: 50px;
+          i {
+            font-size: 40px;
+            margin: auto;
+          }
+        }
+        .info {
+          padding-left: 15px;
+          padding-right: 5px;
+          max-width: 230px;
+          .label {
+            font-size: 0.8rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+/** Responsive : default smartphone **/
+@media screen
+  and (min-device-width: $layout_min-width-sp) 
+  and (max-device-width: $layout_max-width-sp) {
+  
+}
+
+@media screen
+  and (min-device-width: $layout_min-width-tab) 
+  and (max-device-width: $layout_max-width-tab) {
+    
+}
+
+/** Responsive : default PC **/
+@media screen
+  and (min-device-width: $layout_min-width-pc) 
+  and (max-device-width: $layout_max-width-pc) {
+    
+}

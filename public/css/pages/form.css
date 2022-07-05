@@ -1,0 +1,56 @@
+.component__form__error-block {
+  color: red;
+}
+
+.component__register-form {
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 1px solid black;
+  padding: 50px;
+  background: #e6e6ea;
+}
+
+.width-35 {
+  width: 35%;
+}
+
+.width-40 {
+  width: 40%;
+}
+
+.registerButton {
+  text-align: center;
+  width: 100%;
+  background: #009fb7;
+}
+
+.register-form__sns {
+  margin-top: 30px;
+}
+
+.facebookButton {
+  background: #3b5998;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+
+.gmailButton {
+  background: #f4f4f8;
+  color: #b23121;
+  text-align: center;
+  padding: 5px 10px;
+  width: 100%;
+  display: block;
+  border-radius: 3px;
+  border: solid #009fb7 1px;
+  margin-top: 10px;
+}
+
+.red-line {
+  border-bottom: solid #fe4a49 1px;
+  margin: 10px 0px 25px 0px;
+}

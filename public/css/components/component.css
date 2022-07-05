@@ -1,0 +1,417 @@
+.c_page-header-background {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(http://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg);
+  background-attachment: fixed;
+}
+
+.c_short-introduction {
+  text-align: center;
+}
+.c_short-introduction .sub-brand {
+  font-size: 4rem;
+}
+.c_short-introduction .brand {
+  font-size: 12rem;
+}
+
+.c_no-data {
+  margin: auto;
+  text-align: center;
+}
+
+.c_sns-share {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.c_sns-share div {
+  width: 20px;
+  height: 20px;
+}
+
+.c_icon {
+  font-size: 1.2rem;
+  color: #391233;
+}
+
+.c_sns-login-button {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.c_sns-login-button .sns-login-button {
+  margin-top: 10px;
+}
+
+.c_login-form {
+  padding: 10px;
+}
+
+.c_language-flag .flag {
+  width: 65px;
+  height: 35px;
+  margin: auto;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.1019607843);
+  margin-top: 5px;
+}
+
+.c_page-header {
+  min-height: 500px;
+}
+.c_page-header .placeholder-background {
+  position: absolute;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  z-index: -1;
+}
+.c_page-header .placeholder-background::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.c_page-header .page-header {
+  height: 500px;
+  background: transparent !important;
+  position: relative;
+  display: table;
+  color: #FFF;
+}
+.c_page-header .page-header .info {
+  display: table-cell;
+  vertical-align: middle;
+}
+.c_page-header .page-header .info .text {
+  text-align: center;
+  font-size: 1.2rem;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  padding: 0 !important;
+}
+.c_page-header .page-header .info .text .title {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.25;
+}
+.c_page-header .page-header .info .header-buttons {
+  display: flex;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.c_page-header .page-header .info .header-button {
+  margin-bottom: 10px;
+}
+
+.c_page-footer {
+  width: 100%;
+  min-height: 200px;
+  color: #FFF;
+  background: #CA2C46;
+  text-align: center;
+}
+.c_page-footer .page-footer {
+  height: 200px;
+  margin: auto;
+  display: table;
+}
+.c_page-footer .page-footer .text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 1rem;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+}
+
+.c_goal {
+  min-height: 250px;
+}
+.c_goal .goals {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.c_goal .goals .goal {
+  min-height: 250px;
+  background: white;
+  flex: 0 0 24%;
+  padding: 5px;
+  padding-top: 20px;
+  margin-right: 10px;
+  text-align: justify;
+  font-weight: 600;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  border: 1px solid #e5e3dd;
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 10px;
+  text-align: center;
+}
+.c_goal .goals .goal .goal-title {
+  font-size: 1.1rem;
+  margin-top: 30px;
+}
+.c_goal .goals .goal .icon-wrapper {
+  margin: auto;
+}
+.c_goal .goals .goal .icon-wrapper .icon {
+  font-size: 5rem;
+}
+.c_goal .goals .goal .goal-description {
+  padding-top: 20px;
+  font-weight: 100;
+}
+
+.c_sns-share-button {
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.c_sns-share-button .sns-share-button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #e5e3dd;
+  border-radius: 30px;
+  margin: 5px;
+  font-size: 1.2rem;
+  margin: auto;
+  margin-right: 10px;
+  text-align: center;
+  background: #fff;
+}
+
+.c_user-profile-image {
+  text-align: center;
+  position: relative;
+}
+.c_user-profile-image .c_profile-image {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+.c_user-profile-image .c_profile-image .profile-image-handler {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e5e3dd;
+  border-radius: 50px;
+  position: relative;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+.c_user-profile-image .name {
+  font-size: 0.7rem;
+}
+
+.c_testimony {
+  width: 300px;
+  border: 1px solid #e5e3dd;
+  background: #fff;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.1019607843);
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.c_testimony .self-intro {
+  width: 100%;
+  height: 50px;
+  bottom: 0px;
+  text-align: center;
+}
+.c_testimony .self-intro .text {
+  margin-top: 30px;
+  padding-top: 5px;
+  margin-right: 10px;
+}
+.c_testimony .self-intro .text .name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.c_testimony .self-intro .text .title {
+  font-size: 0.7rem;
+}
+.c_testimony .service-tags {
+  margin-top: 5px;
+  font-size: 0.7rem;
+  padding: 5px;
+  margin-left: 24px;
+}
+.c_testimony .service-tags .service-tag {
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 3px;
+  margin-right: 5px;
+}
+.c_testimony .testimony-text {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.c_testimony .testimony-text .text {
+  width: 90%;
+  min-height: 140px;
+  margin-left: 10px;
+  padding-left: 10px;
+  font-weight: 100;
+  text-align: justify;
+}
+
+.c_schedule-participant {
+  width: 80px;
+  height: auto;
+  padding: 5px;
+  text-align: center;
+}
+.c_schedule-participant .participant-data {
+  margin-top: 5px;
+}
+.c_schedule-participant .participant-data .participant-note {
+  font-size: 0.7rem;
+}
+
+.c_entity {
+  width: 320px;
+  height: auto;
+  position: relative;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.1019607843);
+}
+.c_entity .photo {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  margin-top: 10px;
+  background: url("/images/profile-placeholder.jpeg");
+  border-radius: 10px;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: unset !important;
+}
+.c_entity .info {
+  text-align: center;
+  margin-top: 30px;
+}
+.c_entity .info .name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.c_entity .info .position {
+  font-size: 1rem;
+}
+.c_entity .testimony {
+  padding: 10px;
+  padding-top: 20px;
+}
+.c_entity .testimony table {
+  width: 100%;
+}
+
+.c_article {
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+  position: relative;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.1019607843);
+}
+.c_article .thumbnail {
+  width: 100%;
+  height: 200px;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+.c_article .title {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  font-size: 1rem;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.c_article .short-desc {
+  max-height: 100px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #aaaaaa;
+  font-size: 0.7rem;
+}
+.c_article .meta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.c_article .date {
+  font-size: 0.7rem;
+  text-align: right;
+}
+
+/** Responsive : default smartphone **/
+@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  .c_testimony {
+    margin-left: 0px !important;
+  }
+
+  .c_sns-share {
+    flex-direction: row !important;
+    justify-content: center;
+  }
+
+  .c_entity {
+    margin-left: 0px !important;
+  }
+
+  .c_goal {
+    min-height: 300px !important;
+  }
+  .c_goal .goals .goal {
+    flex: 0 0 46% !important;
+    font-size: 0.9rem !important;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 0px !important;
+  }
+  .c_goal .goals .goal .goal-description {
+    font-size: 0.7rem !important;
+  }
+}
+/** Responsive : default PC **/

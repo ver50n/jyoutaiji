@@ -1,0 +1,143 @@
+.home .jyoutaiji-goal-wrapper {
+  min-height: 250px;
+}
+.home .profesional-greeting-wrapper {
+  width: 100%;
+}
+.home .profesional-greetings {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 200px;
+}
+.home .leader-greeting {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+}
+.home .leader-greeting .leader-photo {
+  width: 50%;
+  height: auto;
+}
+.home .leader-greeting .leader-photo .placeholder {
+  width: 320px;
+  height: 320px;
+  margin: auto;
+  background: url(/images/leader-image.jpeg);
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  border-radius: 10px;
+}
+.home .leader-greeting .leader-photo .leader-profile .info {
+  text-align: center;
+}
+.home .leader-greeting .leader-photo .leader-profile .info .leader-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.home .leader-greeting .leader-photo .leader-profile .info .leader-position {
+  font-size: 1rem;
+}
+.home .leader-greeting .leader-message {
+  width: 50%;
+  min-height: auto;
+  padding: 25px;
+}
+.home .leader-greeting .leader-message article {
+  font-size: 1.3rem;
+}
+.home .leader-greeting .leader-message article .message {
+  position: relative;
+  text-align: justify;
+}
+.home .testimonies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.home .articles {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.home .news {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px !important;
+}
+.home .news .each-news {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+.home .news .each-news .news-date {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  min-width: 65px;
+}
+.home .news .each-news .news-date .date {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ccc;
+  border: 1px solid;
+  border-radius: 5px;
+}
+.home .news .each-news .news-title {
+  padding-left: 10px;
+  border-left: 5px solid;
+  display: inline-flex;
+  align-items: center;
+}
+
+/** Responsive : default smartphone **/
+@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  .c_goal {
+    min-height: 300px !important;
+  }
+  .c_goal .goals .goal {
+    flex: 0 0 100% !important;
+    margin-bottom: 10px;
+    font-size: 0.9rem !important;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 0px !important;
+  }
+  .c_goal .goals .goal .goal-description {
+    font-size: 0.7rem !important;
+  }
+
+  .leader-greeting {
+    flex-direction: column-reverse !important;
+  }
+  .leader-greeting .leader-photo {
+    width: 100% !important;
+  }
+  .leader-greeting .leader-message {
+    width: 100% !important;
+    height: auto;
+  }
+  .leader-greeting .leader-message article {
+    padding-left: 0px !important;
+  }
+  .leader-greeting .leader-message article .message {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .leader-greeting .leader-profile {
+    flex-direction: column !important;
+    padding-left: 0px !important;
+    text-align: center !important;
+  }
+}
+/** Responsive : default PC **/

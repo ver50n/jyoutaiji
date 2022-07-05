@@ -1,0 +1,71 @@
+.e_separator-line {
+  border-bottom: 1px solid #e5e3dd;
+  margin: 10px 0px 25px 0px;
+  width: 100%;
+}
+
+.e_required {
+  color: red;
+}
+
+/** Button **/
+.e_btn {
+  display: block;
+  border: 0;
+  margin: auto;
+  text-align: center;
+  border-radius: 0.25rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 200px;
+  background: #fff;
+  color: #000000;
+  border: 1px solid #CA2C46;
+  font-weight: 700;
+}
+
+.e_btn-type3 {
+  display: block;
+  border: 0;
+  margin: auto;
+  text-align: center;
+  border-radius: 0.25rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 200px;
+  background: #7c5295;
+  color: #e2e2e2;
+}
+
+.e_btn-type2 {
+  display: block;
+  border: 0;
+  margin: auto;
+  text-align: center;
+  border-radius: 0.25rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 200px;
+  background: #fff;
+  color: #000000;
+}
+
+/** Form **/
+.text-error {
+  color: red;
+}
+
+.mobile-label {
+  font-weight: bold;
+  display: none;
+}
+
+/* Navbar Custom */
+/** Custom Resource**/
+/** Responsive : default smartphone **/
+@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  .mobile-label {
+    display: block;
+  }
+}
+/** Responsive : default PC **/

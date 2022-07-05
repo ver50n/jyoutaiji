@@ -1,0 +1,77 @@
+// Variables
+@import "../variables";
+
+.about {
+  .infos {
+    display: flex;
+    flex-direction: column;
+    .info {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 10px;
+      .icon {
+        width: 300px;
+        height: 300px;
+        display: table;
+        text-align: center;
+        border-radius: 10px;
+        background: $nav-color;
+        margin: 20px;
+        i {
+          vertical-align: middle;
+          display: table-cell;
+          font-size: 15rem;
+        }
+      }
+      .value{
+        width: 60%;
+        text-align: center;
+      }
+    }
+    .row-reverse {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+/** Responsive : default smartphone **/
+@media screen
+  and (min-device-width: $layout_min-width-sp) 
+  and (max-device-width: $layout_max-width-sp) {
+  .about {
+    .infos {
+      .info, .row-reverse {
+        width: 100%;
+        display: flex;
+        flex-direction: column !important;
+        .icon {
+          width: 100%;
+          margin: 0px;
+        }
+        .value {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .about-header {
+    background-position-y: 0px;
+    background-position-x: -265px;
+  }
+}
+
+@media screen
+  and (min-device-width: $layout_min-width-tab) 
+  and (max-device-width: $layout_max-width-tab) {
+  
+}
+
+/** Responsive : default PC **/
+@media screen
+  and (min-device-width: $layout_min-width-pc) 
+  and (max-device-width: $layout_max-width-pc) {
+  
+}

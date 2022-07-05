@@ -1,0 +1,11 @@
+.login-form {
+  margin-top: 30px !important;
+  width: 300px;
+  border: 1px solid #e5e3dd;
+  border-radius: 4px;
+  margin: auto;
+}
+.login-form .sns-login {
+  position: relative;
+  min-height: 80px;
+}

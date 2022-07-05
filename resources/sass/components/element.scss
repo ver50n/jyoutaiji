@@ -1,0 +1,66 @@
+@import "../variables";
+@import "../mixins";
+
+.e_separator-line {
+  border-bottom: 1px solid $layout_wrapper-border-color;
+  margin: 10px 0px 25px 0px;
+  width: 100%;
+}
+
+.e_required {
+  color:red;
+}
+
+/** Button **/
+.e_btn {
+  @include button-base;
+  background: $background-color;
+  color: $text-color;
+  border: 1px solid $btn-background-color;
+  font-weight: 700;
+}
+
+.e_btn-type3 {
+  @include button-base;
+  background: $theme-color;
+  color: $btn_text-color;
+}
+
+.e_btn-type2 {
+  @include button-base;
+  background: $background-color;
+  color: $text-color;
+}
+
+/** Form **/
+.text-error {
+  color: red;
+}
+.mobile-label {
+  font-weight: bold;
+  display: none;
+}
+
+/* Navbar Custom */
+
+/** Custom Resource**/
+
+/** Responsive : default smartphone **/
+@media screen
+  and (min-device-width: 320px) 
+  and (max-device-width: 768px) {
+    .mobile-label {
+      display: block;
+    }
+}
+
+@media screen
+  and (min-device-width: 768px) 
+  and (max-device-width: 1200px) {
+}
+
+/** Responsive : default PC **/
+@media screen
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) {
+}

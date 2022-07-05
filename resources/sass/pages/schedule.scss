@@ -1,0 +1,50 @@
+// Variables
+@import "../mixins";
+@import "../variables";
+
+.calendar-info {
+  .actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+  }
+  .action {
+    margin-right: 5px;
+  }
+  .participant-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/** Responsive : default smartphone **/
+@media screen
+  and (min-device-width: $layout_min-width-sp) 
+  and (max-device-width: $layout_max-width-sp) {
+  .calendar-info {
+    .actions {
+      flex-direction: column !important;
+      .action {
+        margin-bottom: 5px;
+      }
+    }
+    .schedule-label {
+      display: none;
+    }
+  }
+}
+
+@media screen
+  and (min-device-width: $layout_min-width-tab) 
+  and (max-device-width: $layout_max-width-tab) {
+  
+}
+
+/** Responsive : default PC **/
+@media screen
+  and (min-device-width: $layout_min-width-pc) 
+  and (max-device-width: $layout_max-width-pc) {
+  
+}
