@@ -16,7 +16,6 @@
       <div class="modal-body">
         <div id="sitemap-tree">
         </div>
-        @endforeach
       </div>
     </div>
   </div>
