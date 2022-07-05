@@ -37,26 +37,6 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td><label><a href="#"> 行事A </a></label></td>
-          <td><label>{{ date('Y年m月d日', strtotime('2022-07-01 01:30')) }}, {{ date('H時i分', strtotime('2022-07-01 01:30')) }} (@lang('application-constant.DAY_OF_WEEK.'.date('N', strtotime('2022-07-01 01:30'))))</label></td>
-        </tr>
-        <tr>
-          <td><label><a href="#"> 行事B </a></label></td>
-          <td><label>{{ date('Y年m月d日', strtotime('2022-07-01 01:30')) }}, {{ date('H時i分', strtotime('2022-07-01 01:30')) }} (@lang('application-constant.DAY_OF_WEEK.'.date('N', strtotime('2022-07-01 01:30'))))</label></td>
-        </tr>
-        <tr>
-          <td><label><a href="#"> 行事C </a></label></td>
-          <td><label>{{ date('Y年m月d日', strtotime('2022-07-01 01:30')) }}, {{ date('H時i分', strtotime('2022-07-01 01:30')) }} (@lang('application-constant.DAY_OF_WEEK.'.date('N', strtotime('2022-07-01 01:30'))))</label></td>
-        </tr>
-        <tr>
-          <td><label><a href="#"> 行事D </a></label></td>
-          <td><label>{{ date('Y年m月d日', strtotime('2022-07-01 01:30')) }}, {{ date('H時i分', strtotime('2022-07-01 01:30')) }} (@lang('application-constant.DAY_OF_WEEK.'.date('N', strtotime('2022-07-01 01:30'))))</label></td>
-        </tr>
-        <tr>
-          <td><label><a href="#"> 行事E </a></label></td>
-          <td><label>{{ date('Y年m月d日', strtotime('2022-07-01 01:30')) }}, {{ date('H時i分', strtotime('2022-07-01 01:30')) }} (@lang('application-constant.DAY_OF_WEEK.'.date('N', strtotime('2022-07-01 01:30'))))</label></td>
-        </tr>
         @foreach($schedules as $schedule)
         <tr>
           <td><label><a href="{{ route('pages.schedule-detail', ['id' => $schedule->id]) }}"> {{ $schedule->name }} </a></label></td>
