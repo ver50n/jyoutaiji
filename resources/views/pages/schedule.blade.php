@@ -27,7 +27,7 @@
           $('.change-view').click(function() {
             view = $(this).attr("data");
             calendar.changeView(view);
-          })
+          });
         });
       </script>
       <div class="btn-group" role="group" aria-label="Basic example">
