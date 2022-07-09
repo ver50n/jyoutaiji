@@ -98,4 +98,39 @@ class Admin extends Authenticatable
 
         return $dp;
     }
+
+    public function resetPassword()
+    {
+        $this->password = bcrypt('admin123');
+        $this->save();
+
+        return true;
+    }
+
+    public function changePassword($data)
+    {
+        $validator = null;
+        DB::beginTransaction();
+
+        try {
+            $rules = [
+                'password' => 'required|required_with:confirm_password|same:confirm_password',
+                'confirm_password' => 'required'
+            ];
+
+            $validator = Validator::make($data, $rules);
+            if($validator->fails())
+                return $validator;
+
+            $this->password = bcrypt($data['password']);
+            $this->save();
+
+            DB::commit();
+            return true;
+        } catch (\Exception $e) {
+            DB::rollback();
+            \Log::error($e->getMessage());
+            return $validator->getMessageBag()->add('password', $e->getMessage());
+        }
+    }
 }

@@ -161,6 +161,8 @@
     'calculate' => '計算',
     'login' => 'ログイン',
     'logout' => 'ログアウト',
+    'change-password' => 'パスワード変更',
+    'setting' => '設定',
 
     'basic-info' => '基本情報',
     'status-info' => 'ステータス情報',
@@ -195,5 +197,9 @@
 
     'schedule-apply-success' => 'スケジュール申し込み成功です',
     'schedule-application-date-is-end' => 'スケジュール申し込み期間ではありません',
-    'schedule-application-reach-limit' => 'スケジュールの申し込みができません！ 満員です'
+    'schedule-application-reach-limit' => 'スケジュールの申し込みができません！ 満員です',
+    'reset-password-succed' => 'パスワードリセット完了しました。',
+    'reset-password-failed' => 'パスワードリセット失敗しました。',
+    'change-password-succed' => 'パスワード変更完了しました。',
+    'change-password-failed' => 'パスワード変更失敗しました。',
   ];

@@ -4,6 +4,12 @@
     ->name($module.'.dashboard')
     ->middleware(['AdminAuthentication']);
 
+  Route::get('/setting', 'Manage\ManageController@setting')
+    ->name($module.'.setting')
+    ->middleware(['AdminAuthentication']);
+  Route::post('/change-password-post', 'Manage\ManageController@changePasswordPost')
+    ->name($module.'.change-password-post')
+    ->middleware(['AdminAuthentication']);
   Route::get('/login', 'Manage\LoginController@login')
     ->name('manage.login')
     ->middleware([]);

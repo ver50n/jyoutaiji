@@ -85,6 +85,19 @@
             </button>
             @endif
           </td>
+          <td>
+            <form action="{{route('manage.admin.resetPasswordPost')}}"
+              id="grid-action-reset-password-{{$row->id}}"
+              method="POST"
+            >
+              @csrf
+              <input type="hidden" name="id" value="{{$row->id}}"/>
+            </form>
+            <button class="btn btn-secondary"
+              onClick="document.getElementById('grid-action-reset-password-{{$row->id}}').submit()">
+              <i class="c_icon fas fa-recycle menu-icon"></i> @lang('common.reset') @lang('common.password')
+            </button>
+          </td>
           <td>{{$row->created_at}}</td>
         </tr>
       @endforeach

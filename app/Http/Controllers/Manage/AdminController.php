@@ -116,4 +116,18 @@ class AdminController extends Controller
     return redirect()->route($this->routePrefix.'.list')
       ->with('success', \Lang::get('common.delete-succed', ['module' => \Lang::get('common.'.$this->module)]));
   }
+
+  public function resetPasswordPost(Request $request)
+  {
+    $id = $request->id;
+    $obj = Admin::findOrFail($id);
+    $res = $obj->resetPassword();
+
+    if($res != true) {
+        return redirect()->back()
+            ->with('error', \Lang::get('common.reset-password-failed'));
+    }
+    return redirect()->back()
+      ->with('success', \Lang::get('common.reset-password-succed'));
+  }
 }
