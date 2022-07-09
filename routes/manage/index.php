@@ -20,5 +20,6 @@
   Route::prefix('/announcement')->middleware(['AdminAuthentication'])->group(base_path('routes/manage/announcement.php'));
   Route::prefix('/user')->middleware(['AdminAuthentication'])->group(base_path('routes/manage/user.php'));
   Route::prefix('/gallery')->middleware(['AdminAuthentication'])->group(base_path('routes/manage/gallery.php'));
+  Route::prefix('/contact')->middleware(['AdminAuthentication'])->group(base_path('routes/manage/contact.php'));
   Route::prefix('/schedules')->middleware(['AdminAuthentication'])->group(base_path('routes/manage/schedule.php'));
   Route::prefix('/internal-schedules')->middleware(['AdminAuthentication'])->group(base_path('routes/manage/internal-schedule.php'));

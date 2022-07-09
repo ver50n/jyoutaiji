@@ -126,6 +126,7 @@
     'is_for_member_only' => '会員限定？',
     'is_slider' => 'スライダー',
     'is_auto_approve' => '自動承認？',
+    'is_responded' => '対応済？',
     'profile_icon' => 'プロフィールアイコン',
     'profile_image' => 'プロフィール画像',
     'username' => 'ユーザーネーム',

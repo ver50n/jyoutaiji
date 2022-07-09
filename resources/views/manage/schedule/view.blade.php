@@ -127,7 +127,10 @@
                   <th><label>@lang('common.applicant')</label></th>
                   <td>
                     @foreach($obj->applier as $applicant)
-                      {{ $applicant->name }} : <a href="{{ route($routePrefix.'.approve-applicant', ['id' => $obj->id, 'applicationId'=>$applicant->id]) }}"><i class="fas fa-user-check"></i></a><br />
+                      {{ $applicant->name }} :
+                      <a href="{{ route($routePrefix.'.approve-applicant', ['id' => $obj->id, 'applicationId'=>$applicant->id]) }}"><i class="fas fa-user-check"></i></a> | 
+                      <a href="{{ route($routePrefix.'.reject-applicant', ['id' => $obj->id, 'applicationId'=>$applicant->id]) }}"><i class="fas fa-user-times"></i></a>
+                      <br />
                       {{ $applicant->note }}
                     @endforeach
                   </td>

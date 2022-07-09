@@ -60,13 +60,6 @@
         </button>
         @endif
         </div>
-        <div class="grid-action">
-          <a href="{{route($routePrefix.'.render-export-file', ['id' => $obj->id])}}" target="_blank">
-            <button class="btn btn-outline-secondary">
-            <i class="c_icon fas fa-scroll menu-icon"></i> チラシ生成
-            </button>
-          </a>
-        </div>
       </div>
     	@include($viewPrefix.'._update-form')
     </div>

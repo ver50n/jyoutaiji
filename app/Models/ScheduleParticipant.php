@@ -31,8 +31,8 @@ class ScheduleParticipant extends Model
 
     public function reject()
     {
-        $this->is_approved = 0;
-        $this->save();
+        // $this->is_approved = 0;
+        $this->delete();
 
         return true;
     }

@@ -18,14 +18,14 @@
         <div class="body-container">
           @if (session('success'))
             <div class="alert alert-success">
-              <strong>@lang('common.success') : </strong>@lang('common.notify.'.session('success'))
+              <strong>@lang('common.success') : </strong>@lang('common.'.session('success'))
               <button type="button" class="close" onclick="$('.alert').hide()">&times;</button>
             </div>
             @endif
             
             @if (session('error'))
             <div class="alert alert-danger">
-              <strong>@lang('common.error') : </strong>@lang('common.notify.'.session('error'))
+              <strong>@lang('common.error') : </strong>@lang('common.'.session('error'))
               <button type="button" class="close" onclick="$('.alert').hide()">&times;</button>
             </div>
           @endif

@@ -56,6 +56,6 @@
     </div>
   </div>
   <div class="footer__copy-right">
-    All Right Reserved &copy; @lang('common.brand') @ {{ date('Y', strtotime(NOW())) }}
+    All Right Reserved &copy; @lang('common.brand') {{ date('Y', strtotime(NOW())) }}
   </div>
 </footer>

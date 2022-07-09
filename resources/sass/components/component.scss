@@ -130,7 +130,7 @@
   width: 100%;
   min-height: 200px;
   color: $nav-text-color;
-  background: #CA2C46;
+  background: #B4D3B2;
   text-align: center;
   .page-footer {
     height: 200px;
@@ -238,8 +238,6 @@
   box-shadow: 0px 4px 4px 4px #0000001A;
   margin-left: 20px;
   margin-bottom: 20px;
-  .profile {
-  }
   .self-intro {
     width: 100%;
     height: 50px;
@@ -375,9 +373,6 @@
     flex-direction: row;
     justify-content: space-between;
   }
-  .like {
-
-  }
   .date {
     font-size: 0.7rem;
     text-align: right;
@@ -388,6 +383,14 @@
 @media screen
   and (min-device-width: $layout_min-width-sp) 
   and (max-device-width: $layout_max-width-sp) {
+  .c_short-introduction {
+    .sub-brand {
+      font-size: 2rem;
+    }
+    .brand {
+      font-size: 6rem;
+    }
+  }
 
   .c_testimony {
     margin-left: 0px !important;

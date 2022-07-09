@@ -44,8 +44,18 @@
 					</a>
 					<ul class="dropdown-menu">
 						<li>
+							<a href="{{ route('manage.announcement.list') }}" class="dropdown-item ">
+								<i class="c_icon fas fa-bullhorn menu-icon"></i> @lang('common.announcement')
+							</a>
+						</li>
+						<li>
 							<a href="{{ route('manage.schedule.list') }}" class="dropdown-item ">
 								<i class="c_icon fas fa-calendar-alt menu-icon"></i> @lang('common.schedule')
+							</a>
+						</li>
+						<li>
+							<a href="{{ route('manage.contact.list') }}" class="dropdown-item ">
+								<i class="c_icon fas fa-phone menu-icon"></i> @lang('common.contact')
 							</a>
 						</li>
 					</ul>

@@ -4,6 +4,18 @@
   <div class="container-wrapper schedule">
     <h4 class="subheader">@lang('common.schedule-subheader')</h4>
     <div class="subcontainer calendar-wrapper">
+      <table>
+      @foreach(\App\Helpers\ApplicationConstant::SCHEDULE_BACKGROUND as $type => $background)
+        <tr>
+          <td>@lang('application-constant.SCHEDULE_CATEGORY.'.$type)</td>
+          <td> : </td>
+          <td><div style="width: 60px;height: 20px;background: {{$background}}; color: white;margin-top: 5px;"></div></td>
+        </tr>
+      @endforeach
+      </table>
+      <br />
+      <span class="small">@lang('common.schedule-explaination-value')</span>
+      <br />
       
       <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js"></script>

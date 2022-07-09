@@ -2,28 +2,23 @@
 
 @section('content')
 <div class="container-wrapper">
-  <div class="subcontainer news">
+  <div class="subcontainer contact">
     <div class="content-wrapper">
-    <h4>ニュース一覧</h4>
+    <h4>問い合せ一覧</h4>
 
     <div class="grid-action-wrapper">
       <div class="grid-action">
         @include($viewPrefix.'._filter', ['obj' => $obj])
-      </div>
-      <div class="grid-action">
-        <a href="{{route($routePrefix.'.create')}}">
-          <button class="btn btn-outline-secondary">
-            <i class="c_icon fas fa-plus menu-icon"></i> 作成
-          </button>
-        </a>
       </div>
     </div>
     <table class="grid-table table table-striped table-bordered table-responsive-sm">
     @include('components.table.header',[
       'headers' => [
         'action' => ['sortable' => false, 'title' => trans('common.action')],
-        'content' => ['sortable' => true, 'title' => trans('common.content')],
-        'is_active' => ['sortable' => true, 'title' => trans('common.is_active')],
+        'name' => ['sortable' => true, 'title' => trans('common.name')],
+        'email' => ['sortable' => true, 'title' => trans('common.email')],
+        'phone' => ['sortable' => true, 'title' => trans('common.phone')],
+        'is_active' => ['sortable' => true, 'title' => trans('common.is_responded')],
         'created_at' => ['sortable' => true, 'title' => trans('common.created_at')],
       ]
     ])
@@ -39,16 +34,9 @@
               </a>
             </div>
             <div class="icon-wrapper">
-              <a href="{{route($routePrefix.'.update', ['id' => $row->id])}}">
-                <span class="action-icon">
-                  <i class="c_icon icon fas fa-edit menu-icon" title="edit"></i>
-                </span>
-              </a>
-            </div>
-            <div class="icon-wrapper">
             <form class="form-grid-delete"
               id="form-grid-delete"
-              action="{{ route($routePrefix.'.delete', ['id' => $row->id]) }}"
+              action="{{ route('manage.admin.delete', ['id' => $row->id]) }}"
               method="POST"
               style="display: none;">
             @csrf
@@ -60,25 +48,27 @@
               </a>
             </div>
           </td>
-          <td>{{$row->content}}</td>
+          <td>{{$row->name}}</td>
+          <td>{{$row->email}}</td>
+          <td>{{$row->phone}}</td>
           <td>
             <form action="{{route('helpers.activation')}}"
               id="grid-action-activation-{{$row->id}}"
               method="POST"
             >
               @csrf
-              <input type="hidden" name="model" value="News"/>
+              <input type="hidden" name="model" value="Contact"/>
               <input type="hidden" name="id" value="{{$row->id}}"/>
             </form>
             @if($row->is_active == 0)
             <button class="btn btn-success"
               onClick="document.getElementById('grid-action-activation-{{$row->id}}').submit()">
-              <i class="c_icon fas fa-check menu-icon"></i> 有効にする
+              <i class="c_icon fas fa-check menu-icon"></i> 対応済
             </button>
             @else
             <button class="btn btn-danger"
               onClick="document.getElementById('grid-action-activation-{{$row->id}}').submit()">
-              <i class="c_icon fas fa-times menu-icon"></i> 無効にする
+              <i class="c_icon fas fa-times menu-icon"></i> 未対応
             </button>
             @endif
           </td>
@@ -94,5 +84,5 @@
 @endsection
 
 @section('title')
-  @include('layouts.includes.title', ['title' => 'ニュース一覧'])
+  @include('layouts.includes.title', ['title' => '問い合せ一覧'])
 @endsection
