@@ -28,12 +28,12 @@
     $(document).ready(function() {
       @php
         $children = [];
-        foreach(\App\Models\Gallery::select('category')->groupby('category')->get() as $category) {
+        foreach(\App\Models\GalleryCategory::get() as $galleryCategory) {
           $children[] = [
-            'id' => $category->category,
-            'text' => $category->category,
+            'id' => $galleryCategory->category_cd,
+            'text' => $galleryCategory->name,
             'state' => ['opened' => true ],
-            'a_attr' => [ 'href' => route('pages.gallery', ['filters[category]' => $category->category]) ] 
+            'a_attr' => [ 'href' => route('pages.gallery', ['filters[category]' => $galleryCategory->category_cd]) ] 
           ];
         }
       @endphp

@@ -12,9 +12,9 @@ class Gallery extends Model
     public $table = 'galleries';
     protected $guarded = [];
 
-    public function galeryCategory()
+    public function galleryCategory()
     {
-        return $this->belongsTo(\App\Models\GaleryCategory::Class, 'category_cd', 'category');
+        return $this->belongsTo(\App\Models\GalleryCategory::Class, 'category_cd', 'category');
     }
 
     public function register($data)
@@ -32,8 +32,9 @@ class Gallery extends Model
 
             $this->fill($data);
             if($this->thumbnail) {
-                $fullPath = \App\Utils\FileUtil::upload('gallery_thumbnail', $this->thumbnail);
-                $this->thumbnail = $fullPath;
+                $name = $this->category.'_'.time();
+                $fileName = \App\Utils\FileUtil::upload('gallery_thumbnail', $this->thumbnail, $name);
+                $this->thumbnail = $fileName;
             }
             $this->save();
 

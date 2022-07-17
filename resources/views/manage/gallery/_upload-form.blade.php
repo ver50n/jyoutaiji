@@ -3,6 +3,7 @@
     method="POST"
     enctype="multipart/form-data">
     @csrf
+    <input type="hidden" name="category" value="{{ $obj->category_cd }}" />
     <div class="form-group">
       <label>@lang('common.title')</label> <span class="e_required">*</span>
       <input class="form-control input-sm"
