@@ -99,6 +99,7 @@
     'confirm_password' => 'パスワード確認',
     'name' => '名前',
     'email' => 'メール',
+    'category_cd' => 'ギャラリーカテゴリコード',
     'phone' => '電話',
     'subject' => '話題',
     'slug' => 'スラッグ',

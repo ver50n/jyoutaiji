@@ -1,0 +1,64 @@
+// Variables
+@import "../mixins";
+@import "../variables";
+
+.gallery {
+  .gallery-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+    .navigator {
+    }
+    .show {
+      margin-left: 10px;
+      .images {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .image {
+          width: 300px;
+          margin-top: 10px;
+          margin-right: 10px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+/** Responsive : default smartphone **/
+@media screen
+  and (min-device-width: $layout_min-width-sp) 
+  and (max-device-width: $layout_max-width-sp) {
+    
+  .gallery {
+    .gallery-wrapper {
+      flex-direction: column !important;
+      .show {
+        margin-left: 0px !important;
+        .images {
+          .image {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen
+  and (min-device-width: $layout_min-width-tab) 
+  and (max-device-width: $layout_max-width-tab) {
+  
+}
+
+/** Responsive : default PC **/
+@media screen
+  and (min-device-width: $layout_min-width-pc) 
+  and (max-device-width: $layout_max-width-pc) {
+  
+}

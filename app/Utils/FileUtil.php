@@ -77,7 +77,7 @@ class FileUtil
 
     public static function removeImage($pathName, $fileName, $disk = 'public')
     {
-        $filePath = config('app.env') . config('s3.' . $pathName) . $fileName;
+        $filePath = config('image.path.' . $pathName) . $fileName;
 
         if(\Storage::disk($disk)->exists($filePath)) {
             \Storage::disk($disk)->delete($filePath);

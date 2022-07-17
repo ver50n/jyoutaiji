@@ -2,50 +2,63 @@
 
 @section('content')
   <div class="container-wrapper gallery">
-
-    <div class="subcontainer slider-wrapper">
-      <div class="slider">
-        @foreach($sliders as $slider)
-        <div class="item">
-          <img src="{{ \App\Utils\FileUtil::getImageUrl('gallery_thumbnail', $slider->thumbnail) }}" alt="alt" style="width: 100%;" />
-        </div>
-        @endforeach
+    <div class="subcontainer gallery-wrapper">
+      <div class="navigator">
+        <div id="category-tree"></div>
       </div>
-    </div>
-
-    <div class="subcontainer images-wrapper">
-      <div class="images">
-        @foreach($galleries as $gallery)
-        <div class="image">
-          <a href="{{ \App\Utils\FileUtil::getImageUrl('gallery_thumbnail', $gallery->thumbnail) }}"
-            title=""
-            class="thickbox">
-            <img src="{{ \App\Utils\FileUtil::getImageUrl('gallery_thumbnail', $gallery->thumbnail) }}"
-              width="300" alt="Alt" />
-          </a> 
+      <div class="show">
+        <div class="images">
+          @foreach($galleries as $gallery)
+          <div class="image">
+            <a href="{{ \App\Utils\FileUtil::getImageUrl('gallery_thumbnail', $gallery->thumbnail) }}"
+              class="thickbox">
+              <img src="{{ \App\Utils\FileUtil::getImageUrl('gallery_thumbnail', $gallery->thumbnail) }}" alt="Alt" />
+            </a> 
+          </div>
+          @endforeach
         </div>
-        @endforeach
       </div>
-
     </div>
   </div>
 @endsection
 
 @section('javascript')
   <script type="text/javascript" src="vendor/thick/thick.js"></script>
-  <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
   <script>
     $(document).ready(function() {
-      $('.slider').slick({
-        autoplay: true,
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        adaptiveHeight: true,
-        prevArrow: '',
-        nextArrow: ''
-      });
+      @php
+        $children = [];
+        foreach(\App\Models\Gallery::select('category')->groupby('category')->get() as $category) {
+          $children[] = [
+            'id' => $category->category,
+            'text' => $category->category,
+            'state' => ['opened' => true ],
+            'a_attr' => [ 'href' => route('pages.gallery', ['filters[category]' => $category->category]) ] 
+          ];
+        }
+      @endphp
+      $('#category-tree').jstree({
+      "core" : {
+        "animation" : 0,
+        "check_callback" : true,
+        "themes" : { "stripes" : true },
+        'data' : [
+          {
+            'id' : 'gallery',
+            'text' : '@lang('common.gallery')',
+            'state' : { 'opened' : true },
+            'a_attr' : { 'href' : '{{ route('pages.gallery') }}' }, 
+            'children' : {!! json_encode($children, JSON_UNESCAPED_UNICODE) !!}
+          }
+        ]
+      },
+    }).on('changed.jstree', function (e, data) {
+        var href = data.node.a_attr.href;
+        var parentId = data.node.a_attr.parent_id;
+        if(href == '#')
+        return '';
+        window.location.href = href;
+    });
     })
   </script>
 @endsection
@@ -63,18 +76,5 @@
 
 @section('stylesheet')
   <link rel="stylesheet" href="vendor/thick/thick.css" type="text/css" media="screen" />
-  <link rel="stylesheet" href="vendor/slick/slick.css" type="text/css" media="screen" />
-  <style>
-    .images {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .image {
-      width: 300px;
-      margin-top: 10px;
-      margin-right: 10px;
-    }
-  </style>
+  <link href="{{mix('css/pages/gallery.css')}}" rel="stylesheet">
 @endsection

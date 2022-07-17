@@ -16,6 +16,12 @@
   Route::post('/{id}/update', $controller.'@updatePost')
     ->name($module.'.updatePost')
     ->middleware([]);
+  Route::post('/{id}/uploadGallery', $controller.'@uploadGalleryPost')
+    ->name($module.'.uploadGalleryPost')
+    ->middleware([]);
+  Route::post('/{id}/updateGallery', $controller.'@updateGalleryPost')
+    ->name($module.'.updateGalleryPost')
+    ->middleware([]);
   Route::get('/{id}/view', $controller.'@view')
     ->name($module.'.view')
     ->middleware([]);
@@ -27,4 +33,7 @@
     ->middleware([]);
   Route::post('/{id}/delete', $controller.'@delete')
     ->name($module.'.delete')
+    ->middleware([]);
+  Route::get('/{id}/deleteGallery', $controller.'@deleteGallery')
+    ->name($module.'.deleteGallery')
     ->middleware([]);

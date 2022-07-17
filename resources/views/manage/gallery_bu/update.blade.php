@@ -70,22 +70,6 @@
         </div>
       </div>
     </section>
-    
-    <section class="card components__card-section-wrapper">
-      <div class="card-header">
-        <a data-toggle="collapse" href="#collapse-view__file-info"
-          aria-expanded="true"
-          aria-controls="collapse-view__file-info"
-          id="view" class="d-block">
-          <i class="c_icon fa fa-chevron-down pull-right"> 写真情報</i>
-        </a>
-      </div>
-      <div id="collapse-view__file-info" class="collapse show">
-        <div class="card-body">
-          @include($viewPrefix.'._upload-form')
-        </div>
-      </div>
-    </section>
   </div>
 </div>
 @endsection

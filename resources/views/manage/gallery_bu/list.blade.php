@@ -23,7 +23,7 @@
     @include('components.table.header',[
       'headers' => [
         'action' => ['sortable' => false, 'title' => trans('common.action')],
-        'category_cd' => ['sortable' => true, 'title' => trans('common.category_cd')],
+        'gallery_cd' => ['sortable' => true, 'title' => trans('common.gallery_cd')],
         'name' => ['sortable' => true, 'title' => trans('common.name')],
         'is_active' => ['sortable' => true, 'title' => trans('common.is_active')],
         'created_at' => ['sortable' => true, 'title' => trans('common.created_at')],
@@ -62,7 +62,7 @@
               </a>
             </div>
           </td>
-          <td>{{$row->category_cd}}</td>
+          <td>{{$row->gallery_cd}}</td>
           <td>{{$row->name}}</td>
           <td>
             <form action="{{route('helpers.activation')}}"
@@ -70,7 +70,7 @@
               method="POST"
             >
               @csrf
-              <input type="hidden" name="model" value="GalleryCategory"/>
+              <input type="hidden" name="model" value="Gallery"/>
               <input type="hidden" name="id" value="{{$row->id}}"/>
             </form>
             @if($row->is_active == 0)

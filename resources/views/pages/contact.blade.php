@@ -50,7 +50,7 @@
             <div class="icon"><i class="c_icon fas fa-phone-alt"></i></div>
             <div class="info">
               <div class="label">@lang('common.phone')</div>
-              <a href="tel: 08095871272">080 - 9587 - 1272</a>
+              <a href="tel: 08095871272">080 - 7171 - 5051</a>
               <br />
               <small class="text-muted">@lang('common.phone-response-note')</small>
               <br />
@@ -63,7 +63,7 @@
             </div>
             <div class="info">
               <div class="label">@lang('common.email')</div>
-              <a href = "mailto: office.jyoutaiji@gmail.com">office.jyoutaiji@gmail.com</a>
+              <a href = "mailto: office.jyoutaiji@gmail.com">joutaijishibu@gmail.com</a>
               <br />
               <small class="text-muted">@lang('common.email-response-note')</small>
             </div>

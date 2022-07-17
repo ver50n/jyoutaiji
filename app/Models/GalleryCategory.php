@@ -6,15 +6,15 @@ use Validator;
 use Illuminate\Database\Eloquent\Model;
 use DB;
 
-class Gallery extends Model
+class GalleryCategory extends Model
 {
     use \App\Traits\DataProviderTrait, \App\Traits\RelationTrait;
-    public $table = 'galleries';
+    public $table = 'gallery_categories';
     protected $guarded = [];
 
-    public function galeryCategory()
+    public function galleries()
     {
-        return $this->belongsTo(\App\Models\GaleryCategory::Class, 'category_cd', 'category');
+        return $this->hasMany(\App\Models\Gallery::Class, 'category', 'category_cd');
     }
 
     public function register($data)
@@ -31,10 +31,6 @@ class Gallery extends Model
                 return $validator;
 
             $this->fill($data);
-            if($this->thumbnail) {
-                $fullPath = \App\Utils\FileUtil::upload('gallery_thumbnail', $this->thumbnail);
-                $this->thumbnail = $fullPath;
-            }
             $this->save();
 
             DB::commit();
@@ -61,10 +57,6 @@ class Gallery extends Model
             }
 
             $this->fill($data);
-            if ($this->isDirty('thumbnail')) {
-                $fullPath = \App\Utils\FileUtil::upload('gallery_thumbnail', $this->thumbnail);
-                $this->thumbnail = $fullPath;
-            }
             $this->save();
 
             DB::commit();
@@ -81,14 +73,11 @@ class Gallery extends Model
         $dp = $this;
         $dp = $dp->filterId($dp, $filters);
 
-        if(isset($filters['title']) && $filters['title'] != "")
-            $dp = $dp->where('title', 'LIKE', '%'.$filters['title'].'%');
+        if(isset($filters['name']) && $filters['name'] != "")
+            $dp = $dp->where($this->table.'.name', 'LIKE', '%'.$filters['name'].'%');
 
-        if(isset($filters['category']) && $filters['category'] != "")
-            $dp = $dp->where($this->table.'.category', 'LIKE', '%'.$filters['category'].'%');
-
-        if(isset($filters['is_slider']) && $filters['is_slider'] != "")
-            $dp = $dp->where($this->table.'.is_slider', $filters['is_slider']);
+        if(isset($filters['category_cd']) && $filters['category_cd'] != "")
+            $dp = $dp->where($this->table.'.category_cd', $filters['category_cd']);
 
         $dp = $this->filterIsActive($dp, $filters);
         $dp = $this->filterCreatedAt($dp, $filters);
