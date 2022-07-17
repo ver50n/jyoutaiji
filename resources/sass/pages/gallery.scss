@@ -6,7 +6,6 @@
   .gallery-wrapper {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     margin-bottom: 5px;
     .navigator {
     }
@@ -15,6 +14,7 @@
       .images {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         .image {
           width: 300px;
